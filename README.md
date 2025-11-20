@@ -12,37 +12,37 @@ in windows. Give up on it and just make your own mini webserver.
 
 ## Step 1
 
-Boot up your linux vm (mine is a fedora)
+-   Boot up your linux vm (mine is a fedora)
 
 ------------------------------------------------------------------------
 
 ## Step 2
 
-Download docker by running these commands
+-   Download docker by running these commands
 
-First ensure that you have the config manager:
+-   First ensure that you have the config manager:
 
 ```sudo dnf install dnf-plugins-core```
 
-then run this to get all of the docker components:
+-   then run this to get all of the docker components:
 
 ```sudo dnf config-manager addrepo --from-repofile="https://download.docker.com/linux/fedora/docker-ce.repo"```
 
-and install the rest of the docker packages:
+-   and install the rest of the docker packages:
 
 ```sudo dnf install docker-ce docker-ce-cli containerd.io```
 
-it may ask to import open PGP, say yes
+-   it may ask to import open PGP, say yes
 
-then run
+-   then run
 
 ```sudo systemctl enable docker```
 
-and
+-   and
 
 ```sudo systemctl start docker```
 
-then finally add docker-compose:
+-   then finally add docker-compose:
 
 ```sudo dnf install docker-compose-plugin```
 
@@ -50,7 +50,7 @@ then finally add docker-compose:
 
 ## Step 3
 
-then to get a test dockerized application run:
+-   then to get a test dockerized application run:
 
 ```git clone https://github.com/Djtu75/tempwebserver.git```
 
@@ -58,15 +58,15 @@ then to get a test dockerized application run:
 
 ## Step 4
 
-cd into tempwebserver
+-   cd into tempwebserver
 
-then run 
+-   then run 
 
 ```docker compose up --build```
 
-and you should see the container build
+-   you should see the container build
 
-then open up a web browser and connect to localhost:8080
+-   finally, open up a web browser and connect to localhost:8080
 
 it should look like this:
 <img width="975" height="597" alt="image" src="https://github.com/user-attachments/assets/554a1601-bb89-4ed6-b395-b9d3c7fef2c3" />
