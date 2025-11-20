@@ -17,42 +17,43 @@ Download docker by running these commands
 
 First ensure that you have the config manager:
 
-sudo dnf install dnf-plugins-core
+'''sudo dnf install dnf-plugins-core'''
 
 then run this to get all of the docker components:
 
-sudo dnf config-manager addrepo
---from-repofile="https://download.docker.com/linux/fedora/docker-ce.repo"
+'''sudo dnf config-manager addrepo --from-repofile="https://download.docker.com/linux/fedora/docker-ce.repo"'''
 
 and install the rest of the docker packages:
 
-sudo dnf install docker-ce docker-ce-cli containerd.io
+'''sudo dnf install docker-ce docker-ce-cli containerd.io'''
 
 it may ask to import open PGP, say yes
 
 then run
 
-sudo systemctl enable docker
+'''sudo systemctl enable docker'''
 
 and
 
-sudo systemctl start docker
+'''sudo systemctl start docker'''
 
 then finally add docker-compose:
 
-sudo dnf install docker-compose-plugin
+'''sudo dnf install docker-compose-plugin'''
 
 ## Step 3
 
 then to get a test dockerized application run:
 
-git clone
+'''git clone https://github.com/Djtu75/tempwebserver.git'''
 
 ## Step 4
 
 cd into tempwebserver
 
-then run docker compose up --build
+then run 
+
+'''docker compose up --build'''
 
 and you should see the container build
 
