@@ -1,4 +1,5 @@
-# Setup Guide
+# Djtu75Docker.github.io
+# Dockerization Guide (linux)
 
 ## Step 0
 
@@ -7,9 +8,13 @@ because they've updated the version so much over the past year. Finally
 get it working, only for it not to work in a linux vm when it works fine
 in windows. Give up on it and just make your own mini webserver.
 
+------------------------------------------------------------------------
+
 ## Step 1
 
 Boot up your linux vm (mine is a fedora)
+
+------------------------------------------------------------------------
 
 ## Step 2
 
@@ -41,11 +46,15 @@ then finally add docker-compose:
 
 ```sudo dnf install docker-compose-plugin```
 
+------------------------------------------------------------------------
+
 ## Step 3
 
 then to get a test dockerized application run:
 
 ```git clone https://github.com/Djtu75/tempwebserver.git```
+
+------------------------------------------------------------------------
 
 ## Step 4
 
@@ -60,3 +69,4 @@ and you should see the container build
 then open up a web browser and connect to localhost:8080
 
 it should look like this:
+<img width="975" height="597" alt="image" src="https://github.com/user-attachments/assets/554a1601-bb89-4ed6-b395-b9d3c7fef2c3" />
