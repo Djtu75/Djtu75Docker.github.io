@@ -54,6 +54,35 @@ in windows. Give up on it and just make your own mini webserver.
 
 ```git clone https://github.com/Djtu75/tempwebserver.git```
 
+This downloads a basic python webserver and dockerfiles to serve html as an example.
+The docker container itself is made based on python 3.11-slim:
+
+```# Use the official Python 3 image
+FROM python:3.11-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy current directory contents into the container
+COPY . /app
+
+# Expose port 8000 to the host
+EXPOSE 8000
+
+# Run a simple HTTP server
+CMD ["python", "-m", "http.server", "8000"]```
+
+The docker-compose.yaml file then sets up the basic port, volume, and data:
+
+```services:
+  web:
+    build: .
+    ports:
+      - "8080:8000"
+    volumes:
+      - .:/app
+```
+
 ------------------------------------------------------------------------
 
 ## Step 4
