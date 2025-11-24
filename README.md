@@ -70,7 +70,8 @@ COPY . /app
 EXPOSE 8000
 
 # Run a simple HTTP server
-CMD ["python", "-m", "http.server", "8000"]```
+CMD ["python", "-m", "http.server", "8000"]
+```
 
 The docker-compose.yaml file then sets up the basic port, volume, and data:
 
